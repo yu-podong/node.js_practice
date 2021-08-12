@@ -31,8 +31,17 @@
 1. socker을 만들고 접속을 시도한다.
 2. 서버에게 요청을 한다.
 3. 접속종료를 통지받는다.
-
+---
 ## Docker로 서비스 돌리기
 `docker exec -d -w 'working directory' 'containerID' 명령어`
 * -d : 백그라운드에서 실행이 되도록 설정
 * -w : 명령을 실행할 때 기준이 되는 working directory 지정
+---
+## CONTAINER 동기화
+컨테이너 내용 유지할 떄, **git 저장소**를 이용한다.
+
+원격으로 컨테이너 접속
+소스 작업 후, `commit` + `push`
+다른 원격 컨테이너에서 변경한 내용을 `pull`
+
+=> `push`와 `pull`을 이용하여 서로 다른 원격환경을 동기화한다.
