@@ -26,8 +26,8 @@ http.createServer((req, res) => {
 
   
   try {
-    // index.html을 읽어라
     /* 응답할 때는 res로 응답 */
+    // index.html을 읽어라
     //200 : web server가 성공적으로 요청을 접수했다.
     let data = fs.readFileSync(_path);
     res.writeHeader(200, header);
