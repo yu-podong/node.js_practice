@@ -20,5 +20,11 @@ day5/05_express/package-lock.json
 day6/exam01/node_modules
 day6/exam01/package-lock.json
 
-day6/exam02/node_modules
-day6/exam02/package-lock.json
+day6/exam02_get/node_modules
+day6/exam02_get/package-lock.json
+
+day6/exam03_mw/package-lock.json
+day6/exam03_mw/node_modules
+
+day6/exam04_method/package-lock.json
+day6/exam04_method/node_modules

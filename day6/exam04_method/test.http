@@ -1,0 +1,10 @@
+### test post hello
+POST http://localhost:8080/api/v1/hello
+
+hello post hello
+
+### test post addUser v2 - 한줄 개행 : header, 두 줄 이상 개행 : body
+POST http://localhost:8080/api/v2/addUser
+Content-Type: application/json	
+
+{"name": "yu-podong", "age": 28}
