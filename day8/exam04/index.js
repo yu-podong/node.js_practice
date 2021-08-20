@@ -1,7 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import pkg from 'mongodb';
-import mongoRouter from './database/db_memo.js'
+import mongoRouter from './db_memo.js'
 dotenv.config();
 
 (async () => {

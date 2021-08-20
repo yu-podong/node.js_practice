@@ -15,7 +15,7 @@ export default createStore({
     async updateMemoList(context) {
       try {
         // Object 중 필요한 것만 selecting하는 것
-        let {status, data} = await axios.get('http://localhost:8000/api/v1/memo/find/skip/0/limit/100');
+        let {status, data} = await axios.get('http://localhost:8080/api/v1/memo/find/skip/0/limit/100');
 
         console.log(status);
         console.log(data);
@@ -31,7 +31,7 @@ export default createStore({
 
       let _res = await axios({
         method: 'POST',
-        url: 'http://localhost:8000/api/v1/memo/insert',
+        url: 'http://localhost:8080/api/v1/memo/insert',
         data: JSON.stringify(payload),
         headers: {
           'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ export default createStore({
     async deleteMemo(context, payload) {
       try {
         // Object 중 필요한 것만 selecting하는 것
-        let {status, data} = await axios.get(`http://localhost:8000/api/v1/memo/delete/id/${payload}`);
+        let {status, data} = await axios.get(`http://localhost:8080/api/v1/memo/delete/id/${payload}`);
 
         console.log(status);
         console.log(data);
