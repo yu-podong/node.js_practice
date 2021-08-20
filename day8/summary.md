@@ -61,3 +61,39 @@ methods : {
 	}
 }
 ```
+
+### data 전달과정
+**actions -> mutation -> state -> view**  
+1. actions에서 함수 생성 후, `commit`을 통해 **mutation**으로 전달
+2. **mutation**에서 action와 동일한 함수 생성 후, state에 선언한 전역 data에 저장
+3. **view**의 methods에서 `dispatch`로 가져옴
+```js
+// store > index.js
+export default createStore({
+  state: {
+    todos: []
+  },
+  mutations: {
+    updateTodos(state, payload) {
+      state.todos = payload;
+    }
+  },
+  actions: {
+    updateTodos(context) {
+      ...
+      context.commit('updateTodos', data);
+    }
+  },
+  modules: {
+  }
+})
+
+// view
+methods : {
+	getTodolist_store() {
+		this.$store.dispatch('updateTodos');
+	}
+}
+```
+dispatch -> commit -> store에 write  
+computed -> read  

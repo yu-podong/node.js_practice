@@ -1,0 +1,14 @@
+### test get hello
+GET http://localhost:8080/hello
+
+### test post insert
+POST http://localhost:8080/api/v1/memo/insert
+Content-Type: application/json
+
+{"title":"test6","text":"hello mongo6"}
+
+### test get find
+GET http://localhost:8080/api/v1/memo/find/skip/2/limit/2
+
+### test get delete
+GET http://localhost:8080/api/v1/memo/delete/id/611e0e078817ad40d38c3015
